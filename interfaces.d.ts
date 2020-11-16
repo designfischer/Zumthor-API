@@ -1,5 +1,6 @@
 interface IUser {
-    email: string
+    email: string,
+    thumbnail?: string
 }
 
 interface IReferenceBody {    

@@ -9,7 +9,8 @@ const Schema = new mongoose.Schema({
         type: String,
         lowercase: true,
         required: true
-    }
+    },
+    thumbnail: String
 })
 
 export default mongoose.model<IUserModel>('User', Schema)
