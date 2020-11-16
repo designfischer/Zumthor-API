@@ -16,7 +16,10 @@ routes.delete('/users/:user_id', auth, UserController.deleteUser)
 
 routes.post('/sessions', SessionController.createSession)
 
-routes.post('/users/:user_id/references', ReferenceController.createReference)
-routes.delete('/users/:user_id/references/:reference_id', ReferenceController.deleteReference)
+routes.post('/users/:user_id/references', auth, ReferenceController.createReference)
+routes.delete('/users/:user_id/references/:reference_id', auth, ReferenceController.deleteReference)
+
+routes.get('/users/:user_id/references', ReferenceController.getReferencesByUser)
+routes.get('/references/:reference_id', ReferenceController.getReferenceById)
 
 export default routes
