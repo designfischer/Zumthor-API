@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsnd --transpile-only --ignore-watch node_modules src/index.ts"
+    "dev": "tsnd --transpile-only --ignore-watch node_modules src/index.ts",
+    "start": "node dist/index.js",
+    "postinstall": "tsc",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
